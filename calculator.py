@@ -11,6 +11,7 @@ class Calculator:
 
     @property
     def add(self):
+        # Adds all numbers together, returns answer
         answer = 0
         for i in self.numbers:
             answer += i
@@ -18,6 +19,7 @@ class Calculator:
 
     @property
     def subtract(self):
+        # Takes the first number as base, then subtracts all numbers, returns answer
         answer = self.numbers[0]
         for i in self.numbers:
             answer -= i
@@ -25,6 +27,7 @@ class Calculator:
 
     @property
     def divide(self):
+        # Takes the first number as base, then divides all numbers, returns answer
         answer = self.numbers[0]
         for i in self.numbers:
             answer /= i
@@ -32,6 +35,7 @@ class Calculator:
 
     @property
     def multiply(self):
+        # Takes first number as base, then multiplies all numbers, returns answer
         answer = self.numbers[0]
         for i in self.numbers:
             answer *= i
@@ -39,14 +43,17 @@ class Calculator:
 
     @property
     def modulus(self):
+        # Takes first two numbers, then modulus 2nd from first and returns the answer
         return self.numbers[0] % self.numbers[1]
 
     @property
     def power(self):
+        # Takes first two numbers, 2nd number is the power of the first and returns the answer
         return self.numbers[0] ** self.numbers[1]
 
     @property
     def divisible(self):
+        # Takes two numbers and checks whether you can divide second from first, returns true or false
         if self.numbers[0] % self.numbers[1] == 0:
             return True
         else:
@@ -54,12 +61,14 @@ class Calculator:
 
     @property
     def triangle(self):
+        # Takes two numbers and puts it into the formula
         area = (self.numbers[0] * self.numbers[1]) / 2
+        # Returns the answer
         return area
 
     def converter(self, choice):
         rate = 2.54
-
+        # Takes a single number thats either multipled or divided by the rate, then returns it
         if choice == "cm":
             return self.numbers[0] * rate
         elif choice == "inch":
