@@ -1,5 +1,7 @@
+# Import os for the terminal colour manipulation.
 import os
 
+# Initliase ability to print coloured text in terminal
 os.system("color")
 
 
@@ -68,6 +70,7 @@ options = ["add", "subtract", "divide", "multiply"]
 options_2 = ["modulus", "power", "triangle", "divisible"]
 options_3 = ["convert"]
 
+# Escape codes for coloured text in the terminal
 END = "\033[0m"
 RED = "\033[91m"
 CYAN = "\033[96m"
